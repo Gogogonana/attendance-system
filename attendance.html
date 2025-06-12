@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เช็คชื่อนักเรียน</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="initAttendance()">
+  <div class="container">
+    <h1 id="title">เช็คชื่อนักเรียน</h1>
+
+    <div class="input-group">
+      <label for="checkerName">ชื่อ-สกุลผู้เช็คชื่อ:</label>
+      <input type="text" id="checkerName" placeholder="กรอกชื่อ-สกุล..." />
+    </div>
+
+    <div class="input-group">
+      <label for="datePicker">เลือกวันที่:</label>
+      <input type="date" id="datePicker" />
+      <button class="btn" onclick="loadAttendance()">📋 โหลดรายชื่อ</button>
+    </div>
+
+    <form id="attendanceForm" class="attendance-form"></form>
+
+    <button class="btn save-btn" onclick="saveAttendance()">💾 บันทึก</button>
+    <p id="statusMsg" class="status"></p>
+
+    <a class="btn back-btn" href="index.html">⬅️ กลับหน้าเลือกวิชา</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

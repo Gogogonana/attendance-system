@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ข้อมูลนักเรียน</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadStudents()">
+  <div class="container">
+    <h1 id="title">ข้อมูลนักเรียน</h1>
+
+    <div class="input-group">
+      <label for="batchCount">จำนวนแถวที่จะเพิ่ม (1–10):</label>
+      <input type="number" id="batchCount" value="5" min="1" max="10" style="width:80px;" />
+      <button class="btn" onclick="addStudentRows()">➕ เพิ่มหลายแถว</button>
+      <button class="btn" onclick="viewStudents()">🔍 ดูรายชื่อนักเรียน</button>
+    </div>
+
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>เลขประจำตัว</th>
+          <th>ชื่อ-สกุล</th>
+          <th>ลบ</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button class="btn save-btn" onclick="saveStudents()">💾 บันทึก</button>
+    <p id="statusMsg" class="status"></p>
+
+    <div id="studentListView" class="student-list-view" style="display:none;">
+      <h2>รายชื่อนักเรียนที่บันทึกไว้</h2>
+      <ul id="savedStudentList"></ul>
+    </div>
+
+    <a class="btn back-btn" href="index.html">⬅️ กลับหน้าเลือกวิชา</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ระบบเช็คชื่อนักเรียน - เลือกวิชา</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="renderSubjects()">
+  <div class="container">
+    <h1>Online Check-in System</h1>
+    <div class="input-group">
+      <input type="text" id="subjectInput" placeholder="พิมพ์ชื่อวิชาใหม่..." />
+      <button class="btn" onclick="addSubject()">➕ เพิ่มวิชา</button>
+    </div>
+    <h2>รายวิชาที่มี</h2>
+    <ul id="subjectList" class="subject-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
